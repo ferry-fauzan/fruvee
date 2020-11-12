@@ -1,21 +1,22 @@
 <template>
   <div>
-      <v-row align="end" justify="end" >
-          <v-col cols="12" md="6" class="my-5 mr-16 justify-center" >
-              <v-card  height="300px" width="300px" justify="center">
+      <v-container>
+      <v-row justify="center" >
+          <v-col cols="12" md="6" class="text-center" >
             <v-img
-      class="white--text align-end"
+      class="white--text"
       height="300px"
       width="300px"
       src="@/assets/var1.jpg"
     >
     </v-img>
-              </v-card>
-          </v-col>
 
     <!-- KANAN -->
-       
+       <p>dbhasdguvHUDAUDAUDHVAHUS</p>
+        </v-col>
       </v-row>
+
+      </v-container>
   </div>
 </template>
 

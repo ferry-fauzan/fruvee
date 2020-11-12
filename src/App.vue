@@ -52,7 +52,7 @@
 
 
         <v-btn
-        href="/node"
+        to="/node"
         text
       >
         <span class="mr-2">About Us</span>
@@ -132,3 +132,9 @@ export default {
 </script>
 
 
+<style >
+*{
+ font-family: 'Goldman', cursive;
+
+}
+</style>
