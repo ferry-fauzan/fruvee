@@ -26,7 +26,7 @@
         <v-img 
         src="@/assets/fl.png"
         width="80"
-        class="mb-2"
+        class="mb-2 ml-10"
         />
       </div>
 
@@ -52,8 +52,7 @@
 
 
         <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
+        href="/node"
         text
       >
         <span class="mr-2">About Us</span>

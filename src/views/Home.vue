@@ -111,12 +111,15 @@
         <p class="text-justify my-2 mx-5">Fruvee adalah layanan penjualan buah dan sayuran yang menghubungkan antara penjual dan pembeli secara langsung. Dengan Fruvee cara kita dengan mudah untuk mendapatkan akses hidup sehat. Fruvee cara mudah hidup sehat dengan hanya sekali klik!!!</p>
       </v-col>
       <v-col cols="12" md="6" class="my-10">
+        <!-- <v-card height="250"> -->
          <v-img
         src="../assets/ab1.jpg"
         height="250"
                       
         contain>
       </v-img>
+
+        <!-- </v-card> -->
       </v-col>
     </v-row>
 
@@ -207,7 +210,7 @@
         <h1 class="text-center"> Partner Kami</h1>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row class="mb-16">
       <v-col cols="12" md="3" class="" align="center" justify="center">
         <v-img src="@/assets/lazismu.png" width="200"></v-img>
       </v-col>
