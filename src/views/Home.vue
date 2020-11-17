@@ -1,7 +1,15 @@
 <template>
   <div class="home">
+    
+    <v-img 
+    src="../assets/bg1.jpg"
+    height="530"
+    ></v-img>
+
+
+
     <!-- CAROUSEL -->
-    <v-carousel
+    <!-- <v-carousel
     cycle
     hide-delimiter-background
     hide-delimiters
@@ -18,23 +26,21 @@
     
     <v-btn
       rounded
-      color="yellow"
+      color="#004D40"
       dark
+      to="/about"
     >
       Our Product
     </v-btn>
   
   </v-row>  
-    </v-carousel-item>
+    </v-carousel-item> -->
     
-    <v-carousel-item
+    <!-- <v-carousel-item
      src="../assets/2N.jpg"
      
     >
-      <!-- <v-sheet
-       
-        height="100%"
-      > -->
+    
        <v-row align="end" justify="center" style='height:530px; padding: 20px'>
     
     <v-btn
@@ -46,24 +52,20 @@
     </v-btn>
   
   </v-row>
-      <!-- </v-sheet> -->
-    </v-carousel-item>
+      </v-sheet>
+    </v-carousel-item> -->
 
-    <v-carousel-item
+    <!-- <v-carousel-item
      src="../assets/3N.jpg"
     >
-      <!-- <v-sheet
-       
-        height="100%"
-      > -->
-      
-      <!-- </v-sheet> -->
+   
       <v-row align="end" justify="center" style='height:530px; padding: 20px'>
     
     <v-btn
       rounded
-      color="yellow"
+      color="#004D40"
       dark
+      to="/about"
     >
       Our Product
     </v-btn>
@@ -71,7 +73,7 @@
   </v-row>
     </v-carousel-item>
   </v-carousel>
-
+ -->
 
 
     <!-- KENAPA MEMILIH KAMI -->
@@ -83,21 +85,14 @@
       </h1>
       </v-col>
     </v-row >
+    <v-container>
     <v-row>
-      <v-col cols="12" md="4" >
-        <h2 class="mx-3 my-3 text-justify">Belanja Mudah</h2>
-        <p class="mx-3 mt-3 mb-5 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptate, porro ad aperiam adipisci tempore nobis eveniet amet dolores maxime placeat distinctio quos. Molestiae possimus, eaque minima culpa rem error?</p>
-      </v-col>
-      <v-col cols="12" md="4" >
-        <h2 class="mx-3 my-3 text-justify">Belanja Mudah</h2>
-        <p class="mx-3 my-3 mb-5 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptate, porro ad aperiam adipisci tempore nobis eveniet amet dolores maxime placeat distinctio quos. Molestiae possimus, eaque minima culpa rem error?</p>
-      </v-col>
-      <v-col cols="12" md="4" >
-        <h2 class="mx-3 my-3 text-justify">Belanja Mudah</h2>
-        <p class="mx-3 my-3 mb-5 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptate, porro ad aperiam adipisci tempore nobis eveniet amet dolores maxime placeat distinctio quos. Molestiae possimus, eaque minima culpa rem error?</p>
+      <v-col cols="12" md="6" v-for="whyFruvee in isiWhyFruvee" :key="whyFruvee" >
+        <h2 class="mx-3 my-3 text-justify">{{whyFruvee.judul}}</h2>
+        <p class="mx-3 mt-3 mb-5 text-justify">{{whyFruvee.isi}}</p>
       </v-col>
     </v-row>
-    
+    </v-container>
 
 
 
@@ -159,8 +154,9 @@
 
     <v-card-actions class="pb-0">
       <v-btn
-        color="orange"
+        color="#05AD34"
         text
+        to="/about"
       >
         Beli Disini
       </v-btn>
@@ -192,8 +188,9 @@
 
     <v-card-actions class="pb-0">
       <v-btn
-        color="orange"
+        color="#05AD34"
         text
+        to="/about"
       >
         Beli Disini
       </v-btn>
@@ -261,7 +258,10 @@ export default {
       ],
     }
   },
-  methods:{
+  computed:{
+    isiWhyFruvee(){
+      return this.$store.state.kenapaFruvee
+    }
 
 
   }

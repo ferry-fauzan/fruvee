@@ -2,42 +2,31 @@
   <v-app>
     <v-app-bar
       app
-      color="#F5f5f5"
+      color="#05AD34"
       
     >
-      <div class="d-flex align-center">
-        <!-- <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        /> -->
-
-        <!-- <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        /> -->
-        <v-img 
+      <div class="head d-flex align-center">
+        <!-- <v-img 
         src="@/assets/fl.png"
         width="80"
         class="mb-2 ml-10"
-        />
+        /> -->
+        <h1>FruuVee</h1>
       </div>
 
       <v-spacer></v-spacer>
 
+    <div class="tombol">
+      <v-row class="mt-7">
       <v-btn
         to="/"
-        
         text
+        color="#FFFFFF"
+        bold
       >
-        <span class="mr-2">Home</span>
+        <span class="mr-2">
+          Home
+          </span>
         <!-- <v-icon>mdi-open-in-new</v-icon> -->
       </v-btn>
 
@@ -45,6 +34,7 @@
 
         text
         to="/about"
+        color="#FFFFFF"
       >
         <span class="mr-2">Product</span>
         <!-- <v-icon>mdi-open-in-new</v-icon> -->
@@ -52,13 +42,24 @@
 
 
         <v-btn
-        to="/node"
+        to="/tentang"
         text
+        color="#FFFFFF"
       >
         <span class="mr-2">About Us</span>
         <!-- <v-icon>mdi-open-in-new</v-icon> -->
       </v-btn>
+      <v-text-field
+      color="white"
+            label="Lagi Nyari Apa ?"
+            dense
+            solo
+            class="mr-5"
+          ></v-text-field>
+      </v-row>
+    </div>
 
+    
     </v-app-bar>
 
     <v-main>
@@ -69,7 +70,7 @@
 
    <template>
   <v-footer
-    color="#FFEB3B"
+    color="#008F28"
     padless
   >
     <v-row
@@ -91,7 +92,7 @@
           </v-list-item-icon>
       </v-btn>
       <v-col
-        class="yellow accent-2 py-4 text-center white--text"
+        class="#05AD34 py-4 text-center white--text"
         cols="12"
       >
         {{ new Date().getFullYear() }} — <strong>Fruvee</strong>
@@ -134,7 +135,18 @@ export default {
 
 <style >
 *{
- font-family: 'Goldman', cursive;
+ font-family: 'Raleway', sans-serif;
 
+}
+
+.head{
+  font: bold;
+  color: #FFFFFF;
+  font-size: 70px 70%;
+  
+}
+
+.tombol{
+  font:bold;
 }
 </style>

@@ -19,7 +19,7 @@ const routes = [{
             import ( /* webpackChunkName: "about" */ '../views/About.vue')
     },
     {
-        path: '/node',
+        path: '/node/:id',
         name: 'node',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
@@ -32,7 +32,15 @@ const routes = [{
         name: "admin",
         component: () =>
             import ("../views/admin")
-    }
+    },
+    {
+        path: "/tentang",
+        name: "tentang",
+        component: () =>
+            import ("../views/tentang")
+    },
+
+
 ]
 
 const router = new VueRouter({
