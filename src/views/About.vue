@@ -78,9 +78,9 @@
       </h1>
     </v-row>
     <v-row>
-       <v-col cols="12" md="3" v-for="productVege in listProductsVege" :key="productVege">
+       <v-col cols="12" md="3" v-for="(productVege,index) in listProductsVege" :key="index">
  <v-card
-    class="mx-auto"
+    class="mx-auto mb-12"
     max-width="200"
   >
     <v-img
@@ -101,7 +101,7 @@
       <v-btn
         color="orange"
         text
-        
+        :to="`/node/${index}`"
       >
         Beli Disini
       </v-btn>

@@ -12,14 +12,14 @@ export default new Vuex.Store({
                 price: "10.000",
                 pict: require('@/assets/apel.jpg'),
                 desc: "Ditanam dan dirawat secara organik diatas tanah yang subur serta kaya akan kandungan mineral untuk menghasilkan buah yang terbaik  ",
-                id: 1
+                // id: 1
             },
             {
                 name: "Pisang",
                 price: "20.000",
                 pict: require('@/assets/banana.jpg'),
                 desc: 'Ditanam dan dirawat secara organik diatas tanah yang subur serta kaya akan kandungan mineral untuk menghasilkan buah yang terbaik',
-                id: 2
+                // id: 2
 
             },
             {
@@ -27,14 +27,14 @@ export default new Vuex.Store({
                 price: "20.000",
                 pict: require('@/assets/durian.jpg'),
                 desc: "Ditanam dan dirawat secara organik diatas tanah yang subur serta kaya akan kandungan mineral untuk menghasilkan buah yang terbaik",
-                id: 3
+                // id: 3
             },
             {
                 name: "Semangka",
                 price: "20.000",
                 pict: require('@/assets/semangka.jpg'),
                 desc: 'Ditanam dan dirawat secara organik diatas tanah yang subur serta kaya akan kandungan mineral untuk menghasilkan buah yang terbaik',
-                id: 4
+                // id: 4
             },
         ],
         productsVege: [{
@@ -42,14 +42,14 @@ export default new Vuex.Store({
                 price: "10.000",
                 pict: require('@/assets/lombok.jpg'),
                 desc: "Ditanam dan dirawat secara organik diatas tanah yang subur serta kaya akan kandungan mineral untuk menghasilkan buah yang terbaik  ",
-                id: 1
+                id: 100
             },
             {
                 name: "Paprika",
                 price: "20.000",
                 pict: require('@/assets/paprika.jpg'),
                 desc: 'Ditanam dan dirawat secara organik diatas tanah yang subur serta kaya akan kandungan mineral untuk menghasilkan buah yang terbaik',
-                id: 2
+                id: 200
 
             },
             {
@@ -57,14 +57,14 @@ export default new Vuex.Store({
                 price: "20.000",
                 pict: require('@/assets/tomat.jpg'),
                 desc: "Ditanam dan dirawat secara organik diatas tanah yang subur serta kaya akan kandungan mineral untuk menghasilkan buah yang terbaik",
-                id: 3
+                id: 300
             },
             {
                 name: "Wortel",
                 price: "20.000",
                 pict: require('@/assets/wortel.jpg'),
                 desc: 'Ditanam dan dirawat secara organik diatas tanah yang subur serta kaya akan kandungan mineral untuk menghasilkan buah yang terbaik',
-                id: 4
+                id: 400
             },
         ],
         kenapaFruvee: [{
@@ -79,16 +79,25 @@ export default new Vuex.Store({
     },
     getters: {
         getProduct(state) {
-            return state.product
+            return state.products
         },
-        // getProductVege(state) {
-        //     return state.productVege
-        // }
+        getProductVege(state) {
+            return state.productVege
+        }
     },
     mutations: {
         addProduct(state, data) {
             state.products.push(data)
         },
+        deleteProduct(state, id) {
+            state.products.splice(id, 1)
+        },
+        editProduct(state, product, id) {
+            console.log('gghj', product);
+            state.products[id] = product
+            console.log('yhjhj', state.products[id])
+            console.log(state.products)
+        }
         // addNumb(state) {
         //     state.numb++
         // },
@@ -99,6 +108,9 @@ export default new Vuex.Store({
     actions: {
         addProduct({ commit }, data) {
             commit('addProduct', data)
+        },
+        deleteProduct({ commit }, data) {
+            commit('deleteProduct', data)
         },
         // getUser({ commit }) {
         //     fetch('https://jsonplaceholder.typicode.com/todos/1')

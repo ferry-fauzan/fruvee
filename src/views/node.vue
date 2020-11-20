@@ -1,23 +1,27 @@
 <template>
   <div>
       <!-- <v-container> -->
-      <v-row justify="center" >
+      <v-row justify="center"  >
           <v-col cols="12" md="6" class="text-center justify-center" >
             <v-img
-      height="400px"
-      width="400px"
-      :src='getProductById.pict'
-      class="white--text align-end ml-16"
+        height="300px"
+        contain
+      :src='getProductById.pict || getProductByIdVege.pict'
+      class="white--text align-end"
     >
     </v-img>
+    </v-col>
+    </v-row>
 
+       <v-row justify="center"  >
+          <v-col cols="12" md="6" class="text-center justify-center" >
     <!-- KANAN -->
-       <h3 class="mt-8">{{getProductById.name}}</h3>
+       <h3 class="mt-8">{{getProductById.name || getProductByIdVege.name}}</h3>
        <v-divider inset></v-divider>
-       <h5 class="mt-2">Harga Per-Kilo: Rp. {{getProductById.price}}</h5>
+       <h5 class="mt-2 mb-2">Harga Per-Kilo: Rp. {{getProductById.price || getProductByIdVege.price}}</h5>
        <v-divider inset></v-divider>
        <h5 class="my-2">Deskripsi</h5>
-       <p>{{getProductById.desc}}</p>
+       <p>{{getProductById.desc || getProductByIdVege.desc}}</p>
          <v-btn
       rounded
       color="primary"
@@ -38,6 +42,9 @@ export default {
   computed:{
     getProductById(){
       return  this.$store.state.products[this.$route.params.id]
+    },
+    getProductByIdVege(){
+      return  this.$store.state.productsVege[this.$route.params.id]
     }
   }
 
