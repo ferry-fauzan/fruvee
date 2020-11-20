@@ -39,6 +39,12 @@ const routes = [{
         component: () =>
             import ("../views/tentang")
     },
+    {
+        path: "/node2",
+        name: "node2",
+        component: () =>
+            import ("../views/node2")
+    }
 
 
 ]

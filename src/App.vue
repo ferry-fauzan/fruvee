@@ -49,8 +49,17 @@
         <span class="mr-2">About Us</span>
         <!-- <v-icon>mdi-open-in-new</v-icon> -->
       </v-btn>
+
+      <v-btn
+        to="/admin"
+        text
+        color="#FFFFFF"
+      >
+        <span class="mr-2">Admin</span>
+        <!-- <v-icon>mdi-open-in-new</v-icon> -->
+      </v-btn>
       <v-text-field
-      color="white"
+            color="white"
             label="Lagi Nyari Apa ?"
             dense
             solo

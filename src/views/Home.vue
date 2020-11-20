@@ -4,7 +4,22 @@
     <v-img 
     src="../assets/bg1.jpg"
     height="530"
-    ></v-img>
+    >
+
+    <v-row align="end" justify="center" style="height:510px;">
+       <v-btn
+      rounded
+      color="#05AD34"
+      dark
+      to="/about"
+    >
+      Our Product
+    </v-btn>
+    </v-row>
+
+    </v-img>
+
+   
 
 
 
@@ -35,45 +50,6 @@
   
   </v-row>  
     </v-carousel-item> -->
-    
-    <!-- <v-carousel-item
-     src="../assets/2N.jpg"
-     
-    >
-    
-       <v-row align="end" justify="center" style='height:530px; padding: 20px'>
-    
-    <v-btn
-      rounded
-      color="yellow"
-      dark
-    >
-      Our Product
-    </v-btn>
-  
-  </v-row>
-      </v-sheet>
-    </v-carousel-item> -->
-
-    <!-- <v-carousel-item
-     src="../assets/3N.jpg"
-    >
-   
-      <v-row align="end" justify="center" style='height:530px; padding: 20px'>
-    
-    <v-btn
-      rounded
-      color="#004D40"
-      dark
-      to="/about"
-    >
-      Our Product
-    </v-btn>
-  
-  </v-row>
-    </v-carousel-item>
-  </v-carousel>
- -->
 
 
     <!-- KENAPA MEMILIH KAMI -->
@@ -88,7 +64,7 @@
     <v-container>
     <v-row>
       <v-col cols="12" md="6" v-for="whyFruvee in isiWhyFruvee" :key="whyFruvee" >
-        <h2 class="mx-3 my-3 text-justify">{{whyFruvee.judul}}</h2>
+        <h3 class="mx-3 my-3 text-justify">{{whyFruvee.judul}}</h3>
         <p class="mx-3 mt-3 mb-5 text-justify">{{whyFruvee.isi}}</p>
       </v-col>
     </v-row>
@@ -106,15 +82,18 @@
         <p class="text-justify my-2 mx-5">Fruvee adalah layanan penjualan buah dan sayuran yang menghubungkan antara penjual dan pembeli secara langsung. Dengan Fruvee cara kita dengan mudah untuk mendapatkan akses hidup sehat. Fruvee cara mudah hidup sehat dengan hanya sekali klik!!!</p>
       </v-col>
       <v-col cols="12" md="6" class="my-10">
-        <!-- <v-card height="250"> -->
+        <!-- <div :class="`rounded-tl-xl`"
+             class="pa-4 text-center secondary text-no-wrap" -->
+            
+      
          <v-img
         src="../assets/ab1.jpg"
         height="250"
-                      
+        
+        class="border-image-50%"
         contain>
       </v-img>
-
-        <!-- </v-card> -->
+         <!-- </div> -->
       </v-col>
     </v-row>
 
@@ -267,3 +246,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* .imgTentangKami{
+  border-radius: 30px 10px
+  } */
+</style>
