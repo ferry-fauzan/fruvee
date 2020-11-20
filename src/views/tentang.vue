@@ -47,7 +47,7 @@
     </v-col>
   </section> -->
   </div>
-</template>
+</template>mamam dulu
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cabin:wght@700&display=swap");
